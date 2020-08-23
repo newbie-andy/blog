@@ -39,6 +39,8 @@ class MysqlClient {
                     }
                     resolve(results)
                 })
+                // record sql
+                console.log(query.sql)
             })
         })
     }

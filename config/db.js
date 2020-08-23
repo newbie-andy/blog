@@ -1,5 +1,3 @@
-require('dotenv-flow').config();
-
 // config mysql
 const MYSQL_CONF = {
     host: process.env.DATABASE_HOST,
