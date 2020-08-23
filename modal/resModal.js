@@ -16,7 +16,7 @@ class BaseModal {
     }
 }
 
-class SuccessModal extends BaseModel {
+class SuccessModal extends BaseModal {
     constructor(data, message) {
         super(data, message)
         this.error = 0
