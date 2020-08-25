@@ -14,7 +14,7 @@ class RS {
     }
 
     set (key, value) {
-        this.client.set(key, value)
+        this.client.set(key, String(value))
         this.client.expire(key, 60 * 60 * 24 * process.env.TIME)
     }
 

@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const { isLoginCheck } = require('./../middlewares/user.middleware')
 const {
   login,
-  register
+  register,
+  logout
 } = require('./../controller/user.controller');
 
-// user login
 router.post('/login', login);
-
-// user regist
-router.post('/register', register)
+router.post('/register', register);
+router.post('/logout', isLoginCheck, logout)
 
 module.exports = router;
