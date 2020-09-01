@@ -38,6 +38,7 @@ class MysqlClient {
                         return
                     }
                     resolve(results)
+                    connection.release();
                 })
                 // record sql
                 console.log(query.sql)
