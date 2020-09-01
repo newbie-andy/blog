@@ -7,6 +7,7 @@ var logger = require('morgan');
 require('dotenv-flow').config();
 
 var userRouter = require('./routes/user');
+var blogRouter = require('./routes/blog');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/user', userRouter);
+app.use('/api/blog', blogRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
